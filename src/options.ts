@@ -40,8 +40,6 @@ class Options {
         let senderId = (<HTMLInputElement>document.getElementById("senderId")).value
         chrome.gcm.register([senderId], (registrationId) =>
         {
-            console.log(senderId)
-            console.log(registrationId)
             this.save(senderId, registrationId)
         })
     }

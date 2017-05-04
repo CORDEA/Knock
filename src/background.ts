@@ -38,7 +38,6 @@ class FcmReceiver {
 
     private refreshBadge = (items: {[key: number]: string}) => {
         let n = items ? Object.keys(items).length : 0
-        console.log(n.toString())
         chrome.browserAction.setBadgeText({"text": n.toString()})
     }
 
