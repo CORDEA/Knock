@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise"
+    ]
+  }
+}
