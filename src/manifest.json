@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "",
     "background": {
-        "scripts": ["background.js"],
+        "scripts": ["js/background.js"],
         "persistent": false
     },
     "options_page": "options.html",
@@ -13,7 +13,8 @@
         "gcm"
     ],
     "browser_action": {
-        "default_title": "Knock"
+        "default_title": "Knock",
+        "default_popup": "popup.html"
     },
     "manifest_version": 2
 }

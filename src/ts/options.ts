@@ -17,7 +17,7 @@
  * date  : 2017-05-04
  */
 
-/// <reference path="../node_modules/@types/chrome/index.d.ts" />
+/// <reference path="../../node_modules/@types/chrome/index.d.ts" />
 
 const SENDER_ID_KEY = "senderId"
 
