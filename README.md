@@ -4,5 +4,5 @@
 
 ```sh
 $ npm install
-$ tsc src/*.ts --outDir ./
+$ ./node_modules/webpack/bin/webpack.js
 ```
