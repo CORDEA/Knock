@@ -9,7 +9,7 @@
                             {{ notif.title }}
                         </span>
                         <a class="mdl-list__item-secondary-action read" @click="check(key)">
-                            <i class="material-icons">star</i>
+                            <i class="material-icons">done</i>
                         </a>
                         <span class="mdl-ripple" />
                     </li>
