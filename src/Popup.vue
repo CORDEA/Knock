@@ -1,16 +1,17 @@
 <template>
     <div id ="app">
         <template v-if="enabled">
-            <ul class="demo-list-control mdl-list">
+            <ul class="mdl-list">
                 <template v-for="(notif, key) in notifications">
-                    <li class="mdl-list__item">
+                    <li class="mdl-list__item mdl-js-ripple-effect ripple-background" @click="click(notif.link)">
                         <span class="mdl-list__item-primary-content">
-                            <i class="material-icons  mdl-list__item-avatar">person</i>
+                            <img class="mdl-list__item-avatar" :src="notif.thumbnail" />
                             {{ notif.title }}
                         </span>
-                        <a class="mdl-list__item-secondary-action" href="#" @click="check(key)">
+                        <a class="mdl-list__item-secondary-action read" @click="check(key)">
                             <i class="material-icons">star</i>
                         </a>
+                        <span class="mdl-ripple" />
                     </li>
                 </template>
             </ul>
@@ -56,6 +57,10 @@ export default class App extends Vue {
             })
         })
     }
+
+    click(url: string) {
+        chrome.tabs.create({url: url})
+    }
 }
 </script>
 
@@ -72,6 +77,16 @@ ul {
 
 .no-item h4 {
     margin: 16px auto;
+}
+
+.ripple-background {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.read {
+    cursor: pointer;
 }
 
 </style>
